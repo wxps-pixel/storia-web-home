@@ -159,7 +159,7 @@ a { color: inherit; text-decoration: none; }
 .in-view .in-view-stagger { opacity: 1; transform: translateY(0); }
 
 /* ═══════════════════════════════════════════════
-   ÉCRAN 1 — HÉRO  (nouveau thème)
+   ÉCRAN 1 — HÉRO
    ═══════════════════════════════════════════════ */
 .screen-1, .hero-style {
   background: var(--grad-hero);
@@ -206,7 +206,6 @@ a { color: inherit; text-decoration: none; }
 
 .hero-center { display: flex; flex-direction: column; align-items: center; z-index: 1; position: relative; }
 
-/* Titre reveal lettre par lettre */
 .hero-title {
   font-family: var(--font-display); font-size: clamp(96px,14vw,200px);
   line-height: .92; font-weight: 400; color: var(--ink);
@@ -247,7 +246,6 @@ a { color: inherit; text-decoration: none; }
   100% { opacity:1; transform:translateY(-0.6em) scale(1); }
 }
 
-/* Slogan + soulignement */
 .slogan-wrap { position: relative; margin-top: 20px; z-index: 1; }
 .slogan-wrap.chapter-tl {
   position: absolute; top: 108px; left: 96px; margin-top: 0;
@@ -315,7 +313,7 @@ a { color: inherit; text-decoration: none; }
 .hero-ornament .glyph { margin-right: 8px; color: var(--accent); }
 
 /* ═══════════════════════════════════════════════
-   ÉCRAN 2 — PROBLÈME  (thème original)
+   ÉCRAN 2 — SITUATION INITIALE
    ═══════════════════════════════════════════════ */
 .screen-2 { background: var(--bg); color: var(--ink); padding: 64px 96px; }
 .screen-2 .title {
@@ -365,11 +363,10 @@ a { color: inherit; text-decoration: none; }
 }
 .punchline-text strong { font-weight: 600; color: var(--accent); }
 
-/* compteur animé (fonctionnel, sans changement visuel) */
 .stat-num .stat-value { display: inline; }
 
 /* ═══════════════════════════════════════════════
-   ÉCRAN 3 — SOLUTION  (thème original)
+   ÉCRAN 3 — PERTURBATION
    ═══════════════════════════════════════════════ */
 .screen-3 { background: var(--bg-sunk); padding: 56px 96px; position: relative; }
 .screen-3::before {
@@ -463,7 +460,7 @@ a { color: inherit; text-decoration: none; }
 .step-desc  { font-size: 13px; color: var(--ink-soft); margin-top: 4px; line-height: 1.45; }
 
 /* ═══════════════════════════════════════════════
-   ÉCRAN 4 — MAGIE  (thème original + stagger + tilt)
+   ÉCRAN 4 — PÉRIPÉTIES
    ═══════════════════════════════════════════════ */
 .screen-4 { background: var(--bg); padding: 56px 96px; position: relative; }
 .screen-4::before {
@@ -509,7 +506,6 @@ a { color: inherit; text-decoration: none; }
 .pillar:nth-child(2) .pillar-illu { background: var(--grad-cool); }
 .pillar:nth-child(3) .pillar-illu { background: var(--grad-sun); }
 
-/* voice */
 .illu-voice { display: flex; align-items: center; gap: 5px; height: 56px; z-index: 1; }
 .illu-voice span { width: 4px; border-radius: 999px; background: var(--accent-ink); animation: wave 1.6s ease-in-out infinite; }
 .illu-voice span:nth-child(1)  { height:18%; animation-delay: -.1s; }
@@ -526,7 +522,6 @@ a { color: inherit; text-decoration: none; }
 .illu-voice .mic { margin-right: 14px; color: var(--accent-ink); z-index: 1; }
 @keyframes wave { 0%,100% { transform:scaleY(.4); } 50% { transform:scaleY(1); } }
 
-/* books */
 .illu-books { position:relative; width:200px; height:80px; z-index:1; transform:scale(.85); transform-origin:center; }
 .illu-books .book {
   position:absolute; bottom:0; width:32px; border-radius:3px 3px 1px 1px;
@@ -549,7 +544,6 @@ a { color: inherit; text-decoration: none; }
 .pillar:hover .illu-books .b5 { transform:rotate(-6deg) translateY(-2px); }
 .pillar:hover .illu-books .b6 { transform:rotate(9deg)  translateY(-4px); }
 
-/* shield */
 .illu-shield { position:relative; width:84px; height:84px; z-index:1; }
 .illu-shield .ring {
   position:absolute; inset:0; border-radius:999px;
@@ -575,7 +569,6 @@ a { color: inherit; text-decoration: none; }
 .pillar-body  { font-size:14px; line-height:1.5; color:var(--ink-soft); flex:1; }
 .pillar-quote { margin-top:auto; padding-top:14px; border-top:1px solid var(--line); font-family:var(--font-display); font-style:italic; font-weight:400; font-size:15px; line-height:1.35; color:var(--ink); font-variation-settings:"WONK" 1,"SOFT" 100,"opsz" 96; }
 
-/* micro-stats (ajout discret dans le thème original) */
 .pillar-metric {
   display:flex; align-items:baseline; gap:8px;
   padding:6px 0; border-top:1px dashed var(--line);
@@ -686,21 +679,21 @@ a { color: inherit; text-decoration: none; }
 
     <div class="team">
       <div class="team-member">
-        <div class="team-avatar" style="background-image:url('Content/Anthony.jpg');" role="img" aria-label="Anthony"></div>
+        <div class="team-avatar" style="background-image:url('content/Anthony.jpg');" role="img" aria-label="Anthony"></div>
         <div>
           <div class="team-name">Anthony</div>
           <div class="team-role">ML Ops specialister · front-end lover</div>
         </div>
       </div>
       <div class="team-member">
-        <div class="team-avatar" style="background-image:url('Content/Raphael.png'); background-position: center top;" role="img" aria-label="Raphaël"></div>
+        <div class="team-avatar" style="background-image:url('content/Raphael.png'); background-position: center top;" role="img" aria-label="Raphaël"></div>
         <div>
           <div class="team-name">Raphaël</div>
           <div class="team-role">RAG genius · chunk master</div>
         </div>
       </div>
       <div class="team-member">
-        <div class="team-avatar" style="background-image:url('Content/Thibaud.png'); background-position: center top;" role="img" aria-label="Thibaud"></div>
+        <div class="team-avatar" style="background-image:url('content/Thibaud.png'); background-position: center top;" role="img" aria-label="Thibaud"></div>
         <div>
           <div class="team-name">Thibaud</div>
           <div class="team-role">Prompt maestro · serial APIser</div>
@@ -709,7 +702,6 @@ a { color: inherit; text-decoration: none; }
     </div>
   </div>
 </section>
-
 
 <!-- ═══════════════ ÉCRAN 2 — SITUATION INITIALE ═══════════════ -->
 <section class="screen hero-style hero-style--warm" id="s2" role="region" aria-label="Situation initiale">
@@ -721,13 +713,11 @@ a { color: inherit; text-decoration: none; }
   </div>
 
   <div class="hero-ornament"><span class="glyph">✦</span>Chapitre I · Situation initiale</div>
-  
 
   <div class="hero-center">
     <h1 class="hero-title" aria-label="Il était une fois">
       <span class="part" style="--i:0">Il éta</span><em class="part" style="--i:1">i</em><span class="part" style="--i:2">t une fo</span><em class="part" style="--i:3">i</em><span class="part" style="--i:4">s</span><span class="part dot" style="--i:5" aria-hidden="true">✦</span>
     </h1>
-
     <p class="hero-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Texte placeholder décrivant le décor, les personnages et l'équilibre initial — à remplacer 1:1 par le contenu narratif final.</p>
   </div>
 </section>
@@ -743,13 +733,11 @@ a { color: inherit; text-decoration: none; }
 
   <div class="hero-ornament"><span class="glyph">✦</span>Chapitre II · Perturbation</div>
   <div class="section-stamp">03 / 06</div>
-  
 
   <div class="hero-center">
     <h1 class="hero-title" aria-label="Perturbation">
       <span class="part" style="--i:0">Soud</span><em class="part" style="--i:1">a</em><span class="part" style="--i:2">in</span><span class="part dot" style="--i:3" aria-hidden="true">✦</span>
     </h1>
-
     <p class="hero-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Texte placeholder décrivant l'élément perturbateur qui rompt l'équilibre — à remplacer 1:1 par le contenu narratif final.</p>
   </div>
 </section>
@@ -765,13 +753,11 @@ a { color: inherit; text-decoration: none; }
 
   <div class="hero-ornament"><span class="glyph">✦</span>Chapitre III · Péripéties</div>
   <div class="section-stamp">04 / 06</div>
- 
 
   <div class="hero-center">
     <h1 class="hero-title" aria-label="Péripéties">
       <span class="part" style="--i:0">Alors</span><em class="part" style="--i:1">,</em><span class="part" style="--i:2"> </span><span class="part dot" style="--i:3" aria-hidden="true">✦</span>
     </h1>
-
     <p class="hero-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Texte placeholder décrivant les actions et obstacles que traverse le héros — à remplacer 1:1 par le contenu narratif final.</p>
   </div>
 </section>
@@ -787,13 +773,11 @@ a { color: inherit; text-decoration: none; }
 
   <div class="hero-ornament"><span class="glyph">✦</span>Chapitre IV · Dénouement</div>
   <div class="section-stamp">05 / 06</div>
-  
 
   <div class="hero-center">
     <h1 class="hero-title" aria-label="Dénouement">
       <span class="part" style="--i:0">Enf</span><em class="part" style="--i:1">i</em><span class="part" style="--i:2">n</span><span class="part dot" style="--i:3" aria-hidden="true">✦</span>
     </h1>
-
     <p class="hero-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Texte placeholder décrivant l'événement qui résout la tension narrative — à remplacer 1:1 par le contenu narratif final.</p>
   </div>
 </section>
@@ -809,13 +793,11 @@ a { color: inherit; text-decoration: none; }
 
   <div class="hero-ornament"><span class="glyph">✦</span>Chapitre V · Situation finale</div>
   <div class="section-stamp">06 / 06</div>
- 
 
   <div class="hero-center">
     <h1 class="hero-title" aria-label="Situation finale">
       <span class="part" style="--i:0">F</span><em class="part" style="--i:1">i</em><span class="part" style="--i:2">n</span><span class="part dot" style="--i:3" aria-hidden="true">✦</span>
     </h1>
-
     <p class="hero-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Texte placeholder décrivant le nouvel équilibre, transformé par les événements — à remplacer 1:1 par le contenu narratif final.</p>
   </div>
 </section>
@@ -831,7 +813,6 @@ a { color: inherit; text-decoration: none; }
   const hint    = document.getElementById('kbdHint');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ── Indicateur + in-view ──────────────────── */
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (!e.isIntersecting || e.intersectionRatio < 0.5) return;
@@ -841,13 +822,11 @@ a { color: inherit; text-decoration: none; }
   }, { root: deck, threshold: [0.5, 0.7] });
   screens.forEach(s => obs.observe(s));
 
-  /* ── Navigation au clic ────────────────────── */
   dots.forEach(d => d.addEventListener('click', e => {
     e.preventDefault();
     document.querySelector(d.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }));
 
-  /* ── Clavier ───────────────────────────────── */
   let hintHidden = false;
   function hideHint() {
     if (hintHidden) return;
@@ -865,7 +844,6 @@ a { color: inherit; text-decoration: none; }
     }
   });
 
-  /* ── Progress bar + masquage hint ─────────── */
   deck.addEventListener('scroll', () => {
     const pct = deck.scrollTop / Math.max(1, deck.scrollHeight - deck.clientHeight) * 100;
     bar.style.width = pct + '%';
@@ -873,7 +851,6 @@ a { color: inherit; text-decoration: none; }
   }, { passive: true });
   setTimeout(hideHint, 9000);
 
-  /* ── Compteurs de stats ────────────────────── */
   function animateCount(el, target, delay) {
     if (reduced) { el.textContent = target; return; }
     setTimeout(() => {
@@ -895,7 +872,6 @@ a { color: inherit; text-decoration: none; }
   }, { root: deck, threshold: 0.5 });
   document.querySelectorAll('[data-target]').forEach(s => statObs.observe(s));
 
-  /* ── 3D tilt piliers ───────────────────────── */
   if (!reduced && window.matchMedia('(hover: hover)').matches) {
     document.querySelectorAll('.pillar').forEach(card => {
       let raf;
